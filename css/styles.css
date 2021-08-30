@@ -352,6 +352,9 @@ body main .splitter-body .splitter-output .btn-active:hover {
     padding: 0em !important;
     width: 85% !important;
   }
+  .splitter-body .splitter-input .input-box .error {
+    font-size: .6rem !important;
+  }
   .splitter-body .splitter-output {
     margin: 1em !important;
     width: 65% !important;

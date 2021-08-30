@@ -234,6 +234,9 @@ body main .splitter-body {
     .splitter-input {
       padding: 0em !important;
       width: 85% !important;
+      .input-box .error {
+        font-size: .6rem !important;
+      }
     }
     .splitter-output {
       margin: 1em !important;
