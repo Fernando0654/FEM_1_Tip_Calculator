@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/icons/logo.svg" alt="" />
+    </header>
+    <main>
+      <div class="splitter-body">
+        <form class="splitter-input">
+          <div class="input-box">
+            <label for="bill">Bill</label>
+            <span class="error" id="billError">Can't be zero</span>
+            <div class="input-enter">
+              <img src="./assets/icons/icon-dollar.svg" alt="bill-icon" />
+              <input type="number" id="bill" placeholder="0" min="0" />
+            </div>
+          </div>
+          <div class="input-box">
+            <h2>Select Tip %</h2>
+            <div class="input-tip">
+              <div class="tip-enter">
+                <input type="radio" name="tip" id="5" value="0.5" />
+                <label for="5">5%</label>
+              </div>
+              <div class="tip-enter">
+                <input type="radio" name="tip" id="10" value="0.10" />
+                <label for="10">10%</label>
+              </div>
+              <div class="tip-enter">
+                <input type="radio" name="tip" id="15" value="0.15" />
+                <label for="15">15%</label>
+              </div>
+              <div class="tip-enter">
+                <input type="radio" name="tip" id="25" value="0.25" />
+                <label for="25">25%</label>
+              </div>
+              <div class="tip-enter">
+                <input type="radio" name="tip" id="50" value="0.50" />
+                <label for="50">50%</label>
+              </div>
+              <div class="tip-enter" id="tip-custom">
+                <input
+                  type="number"
+                  name="tip"
+                  id="custom"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="people">Number of People</label>
+            <span class="error" id="peopleError">Can't be zero</span>
+            <div class="input-enter">
+              <img src="./assets/icons/icon-person.svg" alt="bill-icon" />
+              <input type="number" id="people" placeholder="0" min="0"/>
+            </div>
+          </div>
+        </form>
+        <div class="splitter-output">
+          <div class="output-box">
+            <div class="output-text">
+              <h1>Tip Amount</h1>
+              <span>/ person</span>
+            </div>
+            <div class="output-result">
+              <img src="./assets/icons/icon-dollar.svg" alt="bill-icon" />
+              <h1 id="tipAmount">0.00</h1>
+            </div>
+          </div>
+          <div class="output-box">
+            <div class="output-text">
+              <h1>Total</h1>
+              <span>/ person</span>
+            </div>
+            <div class="output-result">
+              <img src="./assets/icons/icon-dollar.svg" alt="bill-icon" />
+              <h1 id="total">0.00</h1>
+            </div>
+          </div>
+          <button id="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/index.js"></script>
+</html>
