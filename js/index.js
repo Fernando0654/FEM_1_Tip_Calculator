@@ -7,7 +7,7 @@ let tipNotCustom = 0;
 bill.addEventListener("keyup", evaluate);
 people.addEventListener("keyup", evaluate);
 tipCustom.addEventListener("keyup", evaluate);
-reset.addEventListener("click", resetForm);
+reset.addEventListener("click", resetForm, true);
 for (let i = 0; i < 5; i++) {
   tipRadio[i].addEventListener("click", evaluate);
 }
@@ -45,11 +45,11 @@ function activeBtnReset() {
   ) {
     reset.style.cursor = "pointer";
     reset.classList.add("btn-active");
-    reset.addEventListener("click", reset);
+    reset.addEventListener("click", resetForm, true);
   } else {
     reset.style.cursor = "not-allowed";
     reset.classList.remove("btn-active");
-    reset.removeEventListener("click");
+    reset.removeEventListener("click", resetForm, true);
   }
 }
 
@@ -62,6 +62,7 @@ function getTipRadio() {
 }
 
 function evaluateInput(type, ID) {
+  console.log(type);
   if (ID === "") {
     if (type.value > 0) {
       clearRadios();
